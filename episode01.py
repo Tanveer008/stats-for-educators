@@ -102,3 +102,17 @@ print("""
 """)
 print("  📂 Full series: github.com/Tanveer008/stats-for-educators")
 print("=" * 45)
+#Descriptive Analysis
+import pandas as pd
+import numpy as np
+
+scores = [30, 45, 55, 60, 62, 65, 68, 70, 85, 95]
+s = pd.Series(scores)
+
+print(f"Mean:              {s.mean():.1f}%")
+print(f"Median:            {s.median():.1f}%")
+print(f"Mode:              {s.mode().tolist()}")
+print(f"Range:             {s.max() - s.min()} points")
+print(f"Std Deviation:     {s.std():.1f}")
+print(f"Q1 (bottom 25%):   {s.quantile(0.25):.1f}%")
+print(f"Q3 (top 25% cut):  {s.quantile(0.75):.1f}%")
